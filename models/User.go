@@ -9,3 +9,7 @@ type User struct {
 	Rol             string `gorm:"type:text;default:''"`
 	ImagenPerfilUrl string `gorm:"type:text"`
 }
+
+func (User) TableName() string {
+	return "Users"
+}

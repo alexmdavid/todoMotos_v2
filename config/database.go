@@ -27,17 +27,17 @@ func ConnectDatabase() {
 	}), &gorm.Config{})
 
 	if err != nil {
-		log.Fatalf("❌ Error al conectar con la base de datos: %v", err)
+		log.Fatalf("Error al conectar con la base de datos: %v", err)
 	}
 
 	sqlDB, err := DB.DB()
 	if err != nil {
-		log.Fatalf("❌ Error al obtener instancia de base de datos: %v", err)
+		log.Fatalf("Error al obtener instancia de base de datos: %v", err)
 	}
 
 	sqlDB.SetMaxOpenConns(25)
 	sqlDB.SetMaxIdleConns(25)
 	sqlDB.SetConnMaxLifetime(5 * time.Minute)
 
-	fmt.Println("✅ Conexión exitosa a NeonDB PostgreSQL")
+	fmt.Println("Conexión exitosa a NeonDB PostgreSQL")
 }

@@ -4,16 +4,16 @@ import (
 	"todoMotos/config"
 	"todoMotos/routes"
 
-	"github.com/gin-gonic/gin"
+	
 )
 
 func main() {
 	
 	config.ConnectDatabase()
 
-	router := gin.Default()
+	router := routes.SetupRouter()
 
-	routes.SetupRouter()
+	
 
 	router.Run(":8080")
 }

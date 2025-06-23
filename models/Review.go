@@ -10,3 +10,6 @@ type Review struct {
 	UserID     uint      `gorm:"not null"`
 	BikeID     uint      `gorm:"not null"`
 }
+func (Review) TableName() string {
+	return "Reviews"
+}

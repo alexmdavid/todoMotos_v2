@@ -12,3 +12,7 @@ type Blog struct {
 	ImagenUrl       string    `gorm:"type:text"`
 	Etiquetas       string    `gorm:"type:text"`
 }
+
+func (Blog) TableName() string {
+	return "Blogs"
+}

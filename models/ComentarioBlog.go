@@ -11,3 +11,7 @@ type ComentarioBlog struct {
 	BlogID          uint      `gorm:"not null"`
 	UsuarioID       uint      `gorm:"not null"`
 }
+
+func (ComentarioBlog) TableName() string {
+	return "ComentariosBlog"
+}

@@ -9,3 +9,7 @@ type ComentarioBlogReaction struct {
 	Tipo         int       `gorm:"not null"`
 	Fecha        time.Time `gorm:"not null"`
 }
+
+func  (ComentarioBlogReaction) TableName() string {
+	return "ComentariosBlogReaction"
+}
